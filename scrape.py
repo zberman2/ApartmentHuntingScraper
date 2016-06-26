@@ -61,11 +61,6 @@ for name, url in urls.iteritems():
                 print field_string
                 f.write(field_string + "\n")
 
-from subprocess import call
-call('git add output.txt', shell = True)
-call('git commit -a "committing new output file"', shell = True)
-call('git push origin master', shell = True)
-
 print "\nWould you like to open the 3 urls in your web browser? (y/n)"
 response = raw_input().lower()
 if response == 'y':
