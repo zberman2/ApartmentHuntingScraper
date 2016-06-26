@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import time
 import urllib
 import json
 import re
@@ -58,6 +59,7 @@ if response == 'y':
     print "\nComing right up!\n"
     for name, url in urls.iteritems():
         webbrowser.open_new_tab(url)
+        time.sleep(1)
 elif response == 'n':
     print "\nHave a nice day!\n"
 else:
