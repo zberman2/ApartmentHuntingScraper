@@ -31,6 +31,8 @@ print "\nDisplaying Irving Company Apartments floor plan information..."
 print "\nAll floor plans must satisfy the following criteria:"
 print "\n\tAvailable == True\n\t2 Bedrooms\n\t2 Bathrooms\n\tMinimumRent <= 3500"
 
+f = open('output.txt', 'w')
+
 for name, url in urls.iteritems():
     web = urllib.urlopen(url)
     # FloorPlanData houses the JSON information we want
@@ -44,14 +46,25 @@ for name, url in urls.iteritems():
            data = pattern.match(script.string)
            json_data = json.loads(data.groups()[0])
 
-    fields = ['PlanName', 'SquareFeet', 'MinimumRent', 'MaximumRent']
+    fields = ['PlanName', 'MinimumRent', 'MaximumRent', 'SquareFeet']
 
-    print "\n", name # print apartment complex name (e.g. "RiverView")
+    name_string = "\n" + name
+    print name_string # print apartment complex name (e.g. "RiverView")
+    f.write(name_string + "\n")
+
     for plan in json_data:
         if approve_plan(plan):
             print ""
+            f.write("\n")
             for field in fields:
-                print field, ':', plan[field]
+                field_string = field + ': ' + str(plan[field])
+                print field_string
+                f.write(field_string + "\n")
+
+from subprocess import call
+call('git add output.txt', shell = True)
+call('git commit -a "committing new output file"', shell = True)
+call('git push origin master', shell = True)
 
 print "\nWould you like to open the 3 urls in your web browser? (y/n)"
 response = raw_input().lower()

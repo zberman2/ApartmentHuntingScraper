@@ -1,0 +1,66 @@
+
+RiverView
+
+PlanName: River View 1- Plan P
+MinimumRent: 3290
+MaximumRent: 3515
+SquareFeet: 1150
+
+PlanName: River View III - Plan L
+MinimumRent: 3275
+MaximumRent: 3940
+SquareFeet: 1040
+
+PlanName: River View III - Plan M
+MinimumRent: 3440
+MaximumRent: 4160
+SquareFeet: 1067
+
+PlanName: River View III - Plan N
+MinimumRent: 3335
+MaximumRent: 4040
+SquareFeet: 1171
+
+PlanName: River View 6- Plan J
+MinimumRent: 3465
+MaximumRent: 5385
+SquareFeet: 1175
+
+NorthPark
+
+PlanName: The Laurels - Plan C
+MinimumRent: 3220
+MaximumRent: 4655
+SquareFeet: 966
+
+PlanName: The Oaks - Plan 5
+MinimumRent: 3305
+MaximumRent: 4875
+SquareFeet: 1070
+
+PlanName: The Pines - Plan F
+MinimumRent: 3110
+MaximumRent: 4455
+SquareFeet: 981
+
+PlanName: The Redwoods - Plan C
+MinimumRent: 3150
+MaximumRent: 4550
+SquareFeet: 966
+
+CrescentVillage
+
+PlanName: Milano Plan 7
+MinimumRent: 3335
+MaximumRent: 5020
+SquareFeet: 1013
+
+PlanName: Toscana Plan 5
+MinimumRent: 3195
+MaximumRent: 5020
+SquareFeet: 1011
+
+PlanName: Plan J
+MinimumRent: 3425
+MaximumRent: 5895
+SquareFeet: 1082
