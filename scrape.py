@@ -1,6 +1,3 @@
-from lxml import html
-import requests
-import webbrowser
 import urllib
 import json
 import re
