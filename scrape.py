@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import urllib
 import json
 import re
@@ -53,5 +55,11 @@ for name, url in urls.iteritems():
 print "\nWould you like to open the 3 urls in your web browser? (y/n)"
 response = raw_input().lower()
 if response == 'y':
+    print "\nComing right up!\n"
     for name, url in urls.iteritems():
-        webbrowser.open(url)
+        webbrowser.open_new_tab(url)
+elif response == 'n':
+    print "\nHave a nice day!\n"
+else:
+    text = "\nヽ(ಠ_ಠ)ノ What about (y/n) don't you understand!! (╯°□°）╯︵ ┻━┻\n".decode('utf-8')
+    print text.encode('utf-8')
